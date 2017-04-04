@@ -1,0 +1,155 @@
+/* TOP LAYER */
+body {
+	margin: 0 auto;
+	background: #1F85C9;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+* {
+	box-sizing: border-box;
+}
+.container {
+    width: 768px;
+    margin: 50px auto;
+	padding: 40px;
+	background: #F0F0F0;
+}
+
+
+
+/* FONTS */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+
+
+/* EUROMILLIONS */
+/* NUMBERS */
+.em__numbers {
+    display: inline-block;
+	margin-right: 40px;
+}
+.em b {
+    display: block;
+	margin-bottom: 10px;
+}
+.em__numbers__nr {
+    display: inline-block;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+	font-weight: bold;
+	border: 1px solid #d3d3d3;
+    border-radius: 100%;
+	background: rgb(206,220,231);
+	background: -moz-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+	background: -webkit-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+	background: linear-gradient(135deg, #fff 0%, #d3d3d3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=1 );
+}
+
+/* STARS */
+.em__stars {
+    display: inline-block;
+}
+.em__stars__wrap {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+	line-height: 46px;
+	text-align: center;
+	vertical-align: middle;
+}
+.em__stars__wrap:after {
+    content: "\2605";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	font-size: 60px;
+    color: #ffdf2f;
+}
+.em__stars__wrap__nr {
+	display: inline-block;
+    position: relative;
+    z-index: 1;
+	width: 50px;
+	height: 50px;
+	line-height: 51px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+    font-size: 90%;
+}
+
+
+
+/* SWISSLOTTO */
+.sl {
+    margin-top: 40px;
+}
+
+/* NUMBERS */
+.sl__numbers {
+    display: inline-block;
+	margin-right: 40px;
+}
+.sl b {
+    display: block;
+	margin-bottom: 10px;
+}
+.sl__numbers__nr {
+    display: inline-block;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+	font-weight: bold;
+	border: 1px solid #d3d3d3;
+    border-radius: 100%;
+	background: rgb(206,220,231);
+	background: -moz-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+	background: -webkit-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+	background: linear-gradient(135deg, #fff 0%, #d3d3d3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=1 );
+}
+
+/* EXTRA NUMBER */
+.sl__extra {
+    display: inline-block;
+}
+.sl__extra__nr {
+    display: inline-block;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+	font-weight: bold;
+	border: 1px solid #d3d3d3;
+    border-radius: 100%;
+	background: rgb(206,220,231);
+	background: -moz-linear-gradient(-45deg, #fff09b 0%, #d2b100 100%);
+	background: -webkit-linear-gradient(-45deg, #fff09b 0%, #d2b100 100%);
+	background: linear-gradient(135deg, #fff09b 0%, #d2b100 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff09b', endColorstr='#d2b100',GradientType=1 );
+}
+
+
+
+/* MOBILE */
+@media all and (max-width: 768px) {
+	body {
+		background: #F0F0F0;
+	}
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 20px;
+	}
+}
