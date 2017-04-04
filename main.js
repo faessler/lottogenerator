@@ -1,3 +1,28 @@
+// ======================== //
+// SWITCHER //
+// ======================== //
+// SWITCHER FUNCTIONS
+function euroMillions() {
+	document.getElementsByTagName("body")[0].className = "euromillions";
+}
+function swissLotto() {
+	document.getElementsByTagName("body")[0].className = "swisslotto";
+}
+
+// HASH REQUEST
+if(window.location.href.indexOf("#euromillions") > -1) {
+   euroMillions();
+}
+euroMillions(); // default
+if(window.location.href.indexOf("#swisslotto") > -1) {
+   swissLotto();
+}
+
+
+
+// ======================== //
+// SHUFFLE
+// ======================== //
 function shuffle() {
 	// CREATE SHUFFLE FUNCTION
 	function shuffle(a) {

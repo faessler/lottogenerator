@@ -7,9 +7,19 @@
 		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 	<body>
-		<div class="container">
-			<h1>Random Lotto number generator</h1>
+		<!-- LOTTO SWITCHER -->
+		<div class="lottoselect">
+			<a class="lottoselect__option" href="#euromillions" onclick="euroMillions();">
+				<span class="lottoselect__option__icon"></span>
+				Euro Millions
+			</a>
+			<a class="lottoselect__option" href="#swisslotto" onclick="swissLotto();">
+				<span class="lottoselect__option__icon"></span>
+				Swiss Lotto
+			</a>
+		</div>
 
+		<div class="container">
 			<!-- EUROMILLIONS -->
 			<div class="em">
 				<h2>Euro Millions</h2>
