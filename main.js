@@ -24,8 +24,6 @@ for (var i = 0; i < emNumbers.length; i++) {
 	emNumbers[i].innerHTML = selectedNumbers[i];
 }
 
-
-
 // STARS
 var numbers = [];
 for (var i = 0; i < 12; i++) {
@@ -56,8 +54,6 @@ for (var i = 0; i < slNumbers.length; i++) {
 	selectedNumbers[i] = numbers[i];
 	slNumbers[i].innerHTML = selectedNumbers[i];
 }
-
-
 
 // STARS
 var numbers = [];
