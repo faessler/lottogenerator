@@ -12,7 +12,9 @@ body.swisslotto {
 	background: #91141D;
 }
 * {
-	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .wrapper {
 	display: table-cell;
@@ -279,6 +281,12 @@ h2 {
 @media all and (max-width: 768px) {
 	body {
 		display: block;
+	    position: fixed;
+	    min-height: inherit;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: -100px;
 		background: #F0F0F0 !important;
 	}
 	.wrapper {
@@ -313,7 +321,7 @@ h2 {
 	.legal {
 		position: absolute;
 		width: 100%;
-		bottom: 0;
+		bottom: 100px;
 		margin: 10px auto 20px;
 		color: #333;
 		font-size: 11px;
