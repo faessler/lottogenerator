@@ -7,62 +7,64 @@
 		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 	<body>
-		<!-- LOTTO SWITCHER -->
-		<div class="lottoselect">
-			<a class="lottoselect__option" href="#euromillions" onclick="euroMillions();">
-				<span class="lottoselect__option__icon"></span>
-				Euro Millions
-			</a>
-			<a class="lottoselect__option" href="#swisslotto" onclick="swissLotto();">
-				<span class="lottoselect__option__icon"></span>
-				Swiss Lotto
-			</a>
-		</div>
-
-		<div class="container">
-			<!-- EUROMILLIONS -->
-			<div class="em">
-				<h2>Euro Millions</h2>
-				<div class="em__numbers">
-					<b>5 Zahlen (1-50)</b>
-					<span class="em__numbers__nr em__numbers__nr--1">0</span>
-					<span class="em__numbers__nr em__numbers__nr--2">0</span>
-					<span class="em__numbers__nr em__numbers__nr--3">0</span>
-					<span class="em__numbers__nr em__numbers__nr--4">0</span>
-					<span class="em__numbers__nr em__numbers__nr--5">0</span>
-				</div>
-				<div class="em__stars">
-					<b>2 Sterne (1-12)</b>
-					<span class="em__stars__wrap">
-						<span class="em__stars__wrap__nr em__stars__wrap__nr--1">0</span>
-					</span>
-					<span class="em__stars__wrap">
-						<span class="em__stars__wrap__nr em__stars__wrap__nr--2">0</span>
-					</span>
-				</div>
+		<div class="wrapper">
+			<!-- LOTTO SWITCHER -->
+			<div class="lottoselect">
+				<a class="lottoselect__option" href="#euromillions" onclick="euroMillions();">
+					<span class="lottoselect__option__icon"></span>
+					Euro Millions
+				</a>
+				<a class="lottoselect__option" href="#swisslotto" onclick="swissLotto();">
+					<span class="lottoselect__option__icon"></span>
+					Swiss Lotto
+				</a>
 			</div>
 
-			<!-- SWISSLOTTO -->
-			<div class="sl">
-				<h2>Swiss Lotto</h2>
-				<div class="sl__numbers">
-					<b>6 Zahlen (1-42)</b>
-					<span class="sl__numbers__nr sl__numbers__nr--1">0</span>
-					<span class="sl__numbers__nr sl__numbers__nr--2">0</span>
-					<span class="sl__numbers__nr sl__numbers__nr--3">0</span>
-					<span class="sl__numbers__nr sl__numbers__nr--4">0</span>
-					<span class="sl__numbers__nr sl__numbers__nr--5">0</span>
-					<span class="sl__numbers__nr sl__numbers__nr--6">0</span>
+			<div class="container">
+				<!-- EUROMILLIONS -->
+				<div class="em">
+					<h2>Euro Millions</h2>
+					<div class="em__numbers">
+						<b>5 Zahlen (1-50)</b>
+						<span class="em__numbers__nr em__numbers__nr--1">0</span>
+						<span class="em__numbers__nr em__numbers__nr--2">0</span>
+						<span class="em__numbers__nr em__numbers__nr--3">0</span>
+						<span class="em__numbers__nr em__numbers__nr--4">0</span>
+						<span class="em__numbers__nr em__numbers__nr--5">0</span>
+					</div>
+					<div class="em__stars">
+						<b>2 Sterne (1-12)</b>
+						<span class="em__stars__wrap">
+							<span class="em__stars__wrap__nr em__stars__wrap__nr--1">0</span>
+						</span>
+						<span class="em__stars__wrap">
+							<span class="em__stars__wrap__nr em__stars__wrap__nr--2">0</span>
+						</span>
+					</div>
 				</div>
-				<div class="sl__extra">
-					<b>1 Zusatzzahl (1-6)</b>
-					<span class="sl__extra__nr sl__extra__nr--1">0</span>
-				</div>
-			</div>
 
-				<!-- RESHUFFLE BUTTON -->
-			<div class="shuffle">
-				<button type="button" name="button" onclick="shuffle()">ReShuffle</button>
+				<!-- SWISSLOTTO -->
+				<div class="sl">
+					<h2>Swiss Lotto</h2>
+					<div class="sl__numbers">
+						<b>6 Zahlen (1-42)</b>
+						<span class="sl__numbers__nr sl__numbers__nr--1">0</span>
+						<span class="sl__numbers__nr sl__numbers__nr--2">0</span>
+						<span class="sl__numbers__nr sl__numbers__nr--3">0</span>
+						<span class="sl__numbers__nr sl__numbers__nr--4">0</span>
+						<span class="sl__numbers__nr sl__numbers__nr--5">0</span>
+						<span class="sl__numbers__nr sl__numbers__nr--6">0</span>
+					</div>
+					<div class="sl__extra">
+						<b>1 Zusatzzahl (1-6)</b>
+						<span class="sl__extra__nr sl__extra__nr--1">0</span>
+					</div>
+				</div>
+
+					<!-- RESHUFFLE BUTTON -->
+				<div class="shuffle">
+					<button type="button" name="button" onclick="shuffle()">ReShuffle</button>
+				</div>
 			</div>
 		</div>
 

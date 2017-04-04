@@ -1,5 +1,7 @@
 /* TOP LAYER */
 body {
+	display: table;
+	min-height: 100vh;
 	margin: 0 auto;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -11,6 +13,10 @@ body.swisslotto {
 }
 * {
 	box-sizing: border-box;
+}
+.wrapper {
+	display: table-cell;
+    vertical-align: middle;
 }
 .container {
     width: 768px;
@@ -261,7 +267,11 @@ h2 {
 /* MOBILE */
 @media all and (max-width: 768px) {
 	body {
-		background: #F0F0F0;
+		display: block;
+		background: #F0F0F0 !important;
+	}
+	.wrapper {
+		display: block;
 	}
 	.container {
 		width: 100%;
@@ -272,12 +282,18 @@ h2 {
 		width: 100%;
 		margin: 0 auto;
 	}
+	.lottoselect__option {
+		border-radius: 0 !important;
+	}
 	.em b {
 	    margin-bottom: 5px;
 	}
 	.em__stars {
 	    display: block;
 	    margin-top: 20px;
+	}
+	.sl b {
+		margin-bottom: 5px;
 	}
 	.sl__extra {
 	    display: block;
