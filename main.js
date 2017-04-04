@@ -1,6 +1,6 @@
-// ======================== //
+// ============================== //
 // SWITCHER //
-// ======================== //
+// ============================== //
 // SWITCHER FUNCTIONS
 function euroMillions() {
 	document.getElementsByTagName("body")[0].className = "euromillions";
@@ -20,9 +20,9 @@ if(window.location.href.indexOf("#swisslotto") > -1) {
 
 
 
-// ======================== //
-// SHUFFLE
-// ======================== //
+// ============================== //
+// SHUFFLE //
+// ============================== //
 function shuffle() {
 	// CREATE SHUFFLE FUNCTION
 	function shuffle(a) {
@@ -109,3 +109,46 @@ function shuffle() {
 	}
 }
 shuffle();
+
+
+
+// ============================== //
+// ADD NEW //
+// ============================== //
+function addNew() {
+	var bodyClass = document.getElementsByTagName("body")[0].className;
+	if (bodyClass == "euromillions") {
+		var createNew = document.createElement("DIV");
+		var contentNew = document.createTextNode("Damn it CARL! -> euromillions");
+		createNew.className = "em__row";
+		createNew.appendChild(contentNew);
+
+		document.body.appendChild(createNew);
+		document.getElementsByClassName("em__row__wrap")[0].appendChild(createNew);
+	}
+	if (bodyClass == "swisslotto") {
+		var createNew = document.createElement("DIV");
+		var contentNew = document.createTextNode("Damn it CARL! -> swisslotto");
+		createNew.className = "sl__row";
+		createNew.appendChild(contentNew);
+
+		document.body.appendChild(createNew);
+		document.getElementsByClassName("sl__row__wrap")[0].appendChild(createNew);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

@@ -168,11 +168,26 @@ button {
 	    display: none;
 	}
 }
+.em__row {
+    display: block;
+    overflow: hidden;
+
+	&+.em__row {
+	    margin-top: 10px;
+	}
+}
 
 // LABEL
-.em b {
-    display: block;
-	margin-bottom: 10px;
+.em__lable {
+	b {
+	    display: inline-block;
+		margin-right: 40px;
+		margin-bottom: 10px;
+
+		&:first-child {
+			width: 220px;
+		}
+	}
 }
 
 // NUMBERS
@@ -180,6 +195,7 @@ button {
     display: inline-block;
 	margin-right: 40px;
 	vertical-align: top;
+	width: 220px;
 }
 .em__numbers__nr {
     display: inline-block;
@@ -254,11 +270,26 @@ button {
 .sl {
     margin-top: 40px;
 }
+.sl__row {
+    display: block;
+    overflow: hidden;
+
+	&+.sl__row {
+	    margin-top: 10px;
+	}
+}
 
 // LABEL
-.sl b {
-    display: block;
-	margin-bottom: 10px;
+.sl__lable {
+	b {
+	    display: inline-block;
+		margin-right: 40px;
+		margin-bottom: 10px;
+
+		&:first-child {
+			width: 265px;
+		}
+	}
 }
 
 // NUMBERS
@@ -266,6 +297,7 @@ button {
     display: inline-block;
 	margin-right: 40px;
 	vertical-align: top;
+	width: 265px;
 }
 .sl__numbers__nr {
     display: inline-block;
