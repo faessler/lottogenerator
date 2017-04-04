@@ -143,6 +143,28 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+/* REFRESH BUTTON */
+.shuffle {
+	margin-top: 40px;
+}
+.shuffle button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 1px solid #d3d3d3;
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-weight: bold;
+    background: rgb(206,220,231);
+    background: -moz-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+    background: -webkit-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+    background: linear-gradient(160deg, #fff 0%, #d3d3d3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=1 );
+}
+
+
+
 /* MOBILE */
 @media all and (max-width: 768px) {
 	body {
@@ -159,6 +181,9 @@ h1, h2, h3, h4, h5, h6 {
 	.em__stars {
 	    display: block;
 	    margin-top: 20px;
+	}
+	.em__stars__wrap:after {
+		font-size: 50px;
 	}
 	.sl__extra {
 	    display: block;
