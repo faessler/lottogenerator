@@ -21,8 +21,12 @@ var emNumbers = document.getElementsByClassName("em__numbers__nr");
 var selectedNumbers = [];
 for (var i = 0; i < emNumbers.length; i++) {
 	selectedNumbers[i] = numbers[i];
+}
+selectedNumbers.sort(function(a, b){return a - b});
+for (var i = 0; i < selectedNumbers.length; i++) {
 	emNumbers[i].innerHTML = selectedNumbers[i];
 }
+
 
 // STARS
 var numbers = [];
@@ -35,9 +39,11 @@ var emStars = document.getElementsByClassName("em__stars__wrap__nr");
 var selectedNumbers = [];
 for (var i = 0; i < emStars.length; i++) {
 	selectedNumbers[i] = numbers[i];
+}
+selectedNumbers.sort(function(a, b){return a - b});
+for (var i = 0; i < selectedNumbers.length; i++) {
 	emStars[i].innerHTML = selectedNumbers[i];
 }
-
 
 
 // SWISS LOTTO
@@ -52,8 +58,12 @@ var slNumbers = document.getElementsByClassName("sl__numbers__nr");
 var selectedNumbers = [];
 for (var i = 0; i < slNumbers.length; i++) {
 	selectedNumbers[i] = numbers[i];
+}
+selectedNumbers.sort(function(a, b){return a - b});
+for (var i = 0; i < selectedNumbers.length; i++) {
 	slNumbers[i].innerHTML = selectedNumbers[i];
 }
+
 
 // STARS
 var numbers = [];
@@ -66,5 +76,8 @@ var slExtraNumber = document.getElementsByClassName("sl__extra__nr");
 var selectedNumbers = [];
 for (var i = 0; i < slExtraNumber.length; i++) {
 	selectedNumbers[i] = numbers[i];
+}
+selectedNumbers.sort(function(a, b){return a - b});
+for (var i = 0; i < selectedNumbers.length; i++) {
 	slExtraNumber[i].innerHTML = selectedNumbers[i];
 }
