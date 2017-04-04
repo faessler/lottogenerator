@@ -1,0 +1,433 @@
+// ============================== //
+// VARIABLES //
+// ============================== //
+$black: #151515;
+
+
+
+// ============================== //
+// TOP LAYER //
+// ============================== //
+body {
+	display: table;
+	min-height: 100vh;
+	margin: 0 auto;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: $black;
+
+	&.euromillions {
+		background: #1F85C9;
+	}
+	&.swisslotto {
+		background: #91141D;
+	}
+}
+.wrapper {
+	display: table-cell;
+    vertical-align: middle;
+}
+.container {
+    width: 768px;
+    margin: 0px auto;
+	padding: 40px;
+	background: #F0F0F0;
+	border-radius: 0 0 10px 10px;
+}
+
+
+
+// ============================== //
+// DEFAULT STYLES //
+// ============================== //
+* {
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+h2 {
+    margin-bottom: 5px;
+}
+button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 1px solid #d3d3d3;
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-weight: bold;
+    background: rgb(206,220,231);
+    background: -moz-linear-gradient(160deg, #fff 0%, #d3d3d3 100%);
+    background: -webkit-linear-gradient(160deg, #fff 0%, #d3d3d3 100%);
+    background: linear-gradient(160deg, #fff 0%, #d3d3d3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=1 );
+    cursor: pointer;
+    position: relative;
+
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+	&:hover {
+		border: 1px solid #ababab;
+	}
+}
+
+
+
+// ============================== //
+// LOTTO SWITCHER //
+// ============================== //
+.lottoselect {
+    width: 768px;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+.lottoselect__option {
+    display: block;
+    width: 50%;
+    float: left;
+	border-radius: 0;
+    background-color: #D3D3D3;
+    height: 50px;
+    line-height: 54px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: $black;
+    font-weight: bold;
+
+	&:hover {
+		background-color: #e0e0e0;
+	}
+	&:first-child {
+		border-radius: 10px 0 0 0;
+	}
+	&:last-child {
+		border-radius: 0 10px 0 0;
+	}
+}
+.lottoselect__option__icon {
+	content: "";
+	display: inline-block;
+	vertical-align: top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 50px;
+	height: 100%;
+}
+.euromillions {
+	.lottoselect__option {
+		&[href="#euromillions"] {
+			background-color: #F0F0F0;
+		}
+		&[href="#euromillions"] {
+			.lottoselect__option__icon {
+				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/euro_millions_logo.png);
+			}
+		}
+		&[href="#swisslotto"] {
+			.lottoselect__option__icon {
+				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/swiss_lotto_logo_bw.png);
+			}
+		}
+	}
+}
+.swisslotto {
+	.lottoselect__option {
+		&[href="#swisslotto"] {
+			background-color: #F0F0F0;
+		}
+		&[href="#swisslotto"] {
+			.lottoselect__option__icon {
+				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/swiss_lotto_logo.png);
+			}
+		}
+		&[href="#euromillions"] {
+			.lottoselect__option__icon {
+				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/euro_millions_logo_bw.png);
+			}
+		}
+	}
+}
+
+
+
+// ============================== //
+// EUROMILLIONS //
+// ============================== //
+.euromillions {
+	.em {
+		display: block;
+	}
+	.sl {
+	    display: none;
+	}
+}
+
+// LABEL
+.em b {
+    display: block;
+	margin-bottom: 10px;
+}
+
+// NUMBERS
+.em__numbers {
+    display: inline-block;
+	margin-right: 40px;
+	vertical-align: top;
+}
+.em__numbers__nr {
+    display: inline-block;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+	font-weight: bold;
+	border: 1px solid #d3d3d3;
+    border-radius: 100%;
+	background: rgb(206,220,231);
+	background: -moz-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+	background: -webkit-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+	background: linear-gradient(135deg, #fff 0%, #d3d3d3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=1 );
+}
+
+// STARS
+.em__stars {
+    display: inline-block;
+	vertical-align: top;
+}
+.em__stars__wrap {
+	display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    line-height: 41px;
+    text-align: center;
+    vertical-align: middle;
+
+	&:after {
+	    content: "\2605";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		font-size: 40px;
+	    color: #ffdf2f;
+		text-shadow: 1px 0px 0px #d3d3d3, -1px 0px 0px #d3d3d3, 0px 1px 0px #d3d3d3, 0px -1px 0px #d3d3d3;
+	}
+}
+.em__stars__wrap__nr {
+	display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    line-height: 41px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+
+
+// ============================== //
+// SWISSLOTTO //
+// ============================== //
+.swisslotto {
+	.sl {
+	    display: block;
+		margin-top: 0;
+	}
+	.em {
+	    display: none;
+	}
+}
+.sl {
+    margin-top: 40px;
+}
+
+// LABEL
+.sl b {
+    display: block;
+	margin-bottom: 10px;
+}
+
+// NUMBERS
+.sl__numbers {
+    display: inline-block;
+	margin-right: 40px;
+	vertical-align: top;
+}
+.sl__numbers__nr {
+    display: inline-block;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+	font-weight: bold;
+	border: 1px solid #d3d3d3;
+    border-radius: 100%;
+	background: rgb(206,220,231);
+	background: -moz-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+	background: -webkit-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+	background: linear-gradient(135deg, #fff 0%, #d3d3d3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=1 );
+}
+
+// EXTRA NUMBER
+.sl__extra {
+    display: inline-block;
+	vertical-align: top;
+}
+.sl__extra__nr {
+    display: inline-block;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+	font-weight: bold;
+	border: 1px solid #d3d3d3;
+    border-radius: 100%;
+	background: rgb(206,220,231);
+	background: -moz-linear-gradient(-45deg, #fff09b 0%, #d2b100 100%);
+	background: -webkit-linear-gradient(-45deg, #fff09b 0%, #d2b100 100%);
+	background: linear-gradient(135deg, #fff09b 0%, #d2b100 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff09b', endColorstr='#d2b100',GradientType=1 );
+}
+
+
+
+// ============================== //
+// OPTIONS //
+// ============================== //
+.optionsfields {
+    margin-top: 40px;
+}
+.optionsfields__addnew {
+    display: inline-block;
+	margin-right: 10px;
+
+	button {
+		padding: 10px 15px 10px 30px;
+
+		&:before {
+			content: "+";
+			position: absolute;
+			font-size: 19px;
+			font-weight: normal;
+			top: 4.5px;
+			left: 15px;
+		}
+	}
+}
+.optionsfields__shuffle {
+	display: inline-block;
+
+	button {
+		padding: 10px 15px 10px 35px;
+
+		&:before {
+			content: "\21BA";
+			position: absolute;
+			font-size: 18px;
+			top: 5px;
+			left: 15px;
+		}
+	}
+}
+
+
+
+// ============================== //
+// LEGAL INFOS //
+// ============================== //
+.legal {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+	margin: 10px auto 50px;
+}
+
+
+
+// ============================== //
+// MOBILE //
+// ============================== //
+@media all and (max-width: 768px) {
+	// TOP LAYER
+	body {
+		display: block;
+	    position: fixed;
+	    min-height: inherit;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: -100px;
+		background: #F0F0F0 !important;
+	}
+	.wrapper {
+		display: block;
+	}
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	// LOTTO SWITCHER
+	.lottoselect {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.lottoselect__option {
+		border-radius: 0 !important;
+	}
+
+	// EUROMILLIONS
+	.em b {
+	    margin-bottom: 5px;
+	}
+	.em__numbers {
+		min-height: inherit;
+	}
+	.em__stars {
+	    display: block;
+	    margin-top: 20px;
+		min-height: inherit;
+	}
+
+	// SWISSLOTTO
+	.sl b {
+		margin-bottom: 5px;
+	}
+	.sl__numbers {
+		min-height: inherit;
+	}
+	.sl__extra {
+	    display: block;
+	    margin-top: 20px;
+		min-height: inherit;
+	}
+
+	// LEGAL
+	.legal {
+		position: absolute;
+		width: 100%;
+		bottom: 100px;
+		margin: 10px auto 20px;
+		color: #333;
+		font-size: 11px;
+	}
+}
