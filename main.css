@@ -160,10 +160,18 @@ h2 {
     padding: 10px 15px;
     font-weight: bold;
     background: rgb(206,220,231);
-    background: -moz-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
-    background: -webkit-linear-gradient(-45deg, #fff 0%, #d3d3d3 100%);
+    background: -moz-linear-gradient(160deg, #fff 0%, #d3d3d3 100%);
+    background: -webkit-linear-gradient(160deg, #fff 0%, #d3d3d3 100%);
     background: linear-gradient(160deg, #fff 0%, #d3d3d3 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=1 );
+	cursor: pointer;
+}
+.shuffle button:hover {
+	border: 1px solid #ababab;
+}
+.shuffle button:focus {
+	outline: none;
+	box-shadow: none;
 }
 
 
