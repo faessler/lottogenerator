@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 	left: 0;
 	font-size: 60px;
     color: #ffdf2f;
+	text-shadow: 1px 0px 0px #d3d3d3, -1px 0px 0px #d3d3d3, 0px 1px 0px #d3d3d3, 0px -1px 0px #d3d3d3;
 }
 .em__stars__wrap__nr {
 	display: inline-block;
