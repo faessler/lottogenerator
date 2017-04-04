@@ -111,6 +111,7 @@ h2 {
     display: inline-block;
 	margin-right: 40px;
 	vertical-align: top;
+	min-height: 80px;
 }
 .em b {
     display: block;
@@ -137,6 +138,7 @@ h2 {
 .em__stars {
     display: inline-block;
 	vertical-align: top;
+	min-height: 80px;
 }
 .em__stars__wrap {
     display: inline-block;
@@ -190,6 +192,7 @@ h2 {
     display: inline-block;
 	margin-right: 40px;
 	vertical-align: top;
+	min-height: 80px;
 }
 .sl b {
     display: block;
@@ -216,6 +219,7 @@ h2 {
 .sl__extra {
     display: inline-block;
 	vertical-align: top;
+	min-height: 80px;
 }
 .sl__extra__nr {
     display: inline-block;
@@ -307,16 +311,24 @@ h2 {
 	.em b {
 	    margin-bottom: 5px;
 	}
+	.em__numbers {
+		min-height: inherit;
+	}
 	.em__stars {
 	    display: block;
 	    margin-top: 20px;
+		min-height: inherit;
 	}
 	.sl b {
 		margin-bottom: 5px;
 	}
+	.sl__numbers {
+		min-height: inherit;
+	}
 	.sl__extra {
 	    display: block;
 	    margin-top: 20px;
+		min-height: inherit;
 	}
 	.legal {
 		position: absolute;
