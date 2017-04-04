@@ -65,9 +65,9 @@ for (var i = 0; i < selectedNumbers.length; i++) {
 }
 
 
-// STARS
+// EXTRA NUMBER
 var numbers = [];
-for (var i = 0; i < 12; i++) {
+for (var i = 0; i < 6; i++) {
 	numbers[i] = i+1;
 }
 shuffle(numbers);
