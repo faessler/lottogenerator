@@ -136,6 +136,7 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--3'>0</span>\
 				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--4'>0</span>\
 				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--5'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--6'>0</span>\
 			</div>\
 			<div class='" + classListener + "__extra'>\
 				<span class='" + classListener + "__extra__nr " + classListener + "__extra__nr--1'>0</span>\
