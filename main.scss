@@ -178,15 +178,11 @@ button {
 }
 
 // LABEL
-.em__lable {
+.em {
 	b {
-	    display: inline-block;
+	    display: block;
 		margin-right: 40px;
 		margin-bottom: 10px;
-
-		&:first-child {
-			width: 220px;
-		}
 	}
 }
 
@@ -280,15 +276,11 @@ button {
 }
 
 // LABEL
-.sl__lable {
+.sl {
 	b {
-	    display: inline-block;
+	    display: block;
 		margin-right: 40px;
 		margin-bottom: 10px;
-
-		&:first-child {
-			width: 265px;
-		}
 	}
 }
 
