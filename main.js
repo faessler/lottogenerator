@@ -101,36 +101,106 @@ getNumbers('sl', 42, 6, 6, 1);
 // ============================== //
 // ADD NEW //
 // ============================== //
-function addNew() {
-	var bodyClass = document.getElementsByTagName("body")[0].className;
-	if (bodyClass == "euromillions") {
-		$(".em__row__wrap").append("<div class='em__row'>\
-		<div class='em__numbers'><span class='em__numbers__nr em__numbers__nr--1'>0</span>\
-		<span class='em__numbers__nr em__numbers__nr--2'>0</span>\
-		<span class='em__numbers__nr em__numbers__nr--3'>0</span>\
-		<span class='em__numbers__nr em__numbers__nr--4'>0</span>\
-		<span class='em__numbers__nr em__numbers__nr--5'>0</span>\
-		</div>\
-		<div class='em__stars'>\
-		<span class='em__stars__wrap'>\
-		<span class='em__stars__wrap__nr em__stars__wrap__nr--1'>0</span>\
-		</span>\
-		<span class='em__stars__wrap'>\
-		<span class='em__stars__wrap__nr em__stars__wrap__nr--2'>0</span>\
-		</span>\
-		</div>\
-		</div>");
+function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extraHighestNumber, extraNeededNumbers) {
 
-		document.body.appendChild(createNew);
-		document.getElementsByClassName("em__row__wrap")[0].appendChild(createNew);
+	// Euromillions
+	if (classListener == "em") {
+		$("." + classListener + "__row__wrap").append("\
+		<div class='" + classListener + "__row'>\
+			<div class='" + classListener + "__numbers'>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--1'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--2'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--3'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--4'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--5'>0</span>\
+			</div>\
+			<div class='" + classListener + "__stars'>\
+				<span class='" + classListener + "__stars__wrap'>\
+					<span class='" + classListener + "__stars__wrap__nr " + classListener + "__stars__wrap__nr--1'>0</span>\
+				</span>\
+				<span class='" + classListener + "__stars__wrap'>\
+					<span class='" + classListener + "__stars__wrap__nr " + classListener + "__stars__wrap__nr--2'>0</span>\
+				</span>\
+			</div>\
+		</div>\
+		");
 	}
-	if (bodyClass == "swisslotto") {
-		var createNew = document.createElement("DIV");
-		var contentNew = document.createTextNode("Damn it CARL! -> swisslotto");
-		createNew.className = "sl__row";
-		createNew.appendChild(contentNew);
 
-		document.body.appendChild(createNew);
-		document.getElementsByClassName("sl__row__wrap")[0].appendChild(createNew);
+	// Swisslotto
+	if (classListener == "sl") {
+		$("." + classListener + "__row__wrap").append("\
+		<div class='" + classListener + "__row'>\
+			<div class='" + classListener + "__numbers'>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--1'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--2'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--3'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--4'>0</span>\
+				<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--5'>0</span>\
+			</div>\
+			<div class='" + classListener + "__extra'>\
+				<span class='" + classListener + "__extra__nr " + classListener + "__extra__nr--1'>0</span>\
+			</div>\
+		</div>\
+		");
 	}
+
+
+	//
+	// // Create HTML
+	// $("." + classListener + "__row__wrap").append("\
+	// <div class='" + classListener + "__row'>\
+	// 	<div class='" + classListener + "__numbers'>\
+	// 	</div>\
+	// 	<div class='" + classListener + "__stars'>\
+	// 	</div>\
+	// </div>\
+	// ");
+	//
+	// // Main Numbers
+	// var numbers = [];
+	// for (var i = 0; i < mainNeededNumbers; i++) {
+	// 	numbers[i] = i+1;
+	// 	$("." + classListener + "__numbers").append("\
+	// 	<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--" + numbers[i] + "'>0</span>\
+	// 	");
+	// }
+
+	// // Fill in Numbers
+	// $("." + classListener + "__row").each(function(){
+	// 	shuffle(numbers);
+	// 	var emNumbers = $(this).find("." + classListener + "__numbers__nr");
+	// 	var selectedNumbers = [];
+	// 	for (var i = 0; i < emNumbers.length; i++) {
+	// 		selectedNumbers[i] = numbers[i];
+	// 	}
+	// 	selectedNumbers.sort(function(a, b){return a - b});
+	// 	for (var i = 0; i < selectedNumbers.length; i++) {
+	// 		emNumbers[i].innerHTML = selectedNumbers[i];
+	// 	}
+	// });
+
+
+
+	// Extra Numbers
+	var numbers = [];
+	for (var i = 0; i < extraHighestNumber; i++) {
+		numbers[i] = i+1;
+	}
+
+
+
+
+	// // Fill in Numbers
+	// $("." + classListener + "__row").each(function(){
+	// 	shuffle(numbers);
+	// 	var emNumbers = $(this).find("." + classListener + "__numbers__nr");
+	// 	var selectedNumbers = [];
+	// 	for (var i = 0; i < emNumbers.length; i++) {
+	// 		selectedNumbers[i] = numbers[i];
+	// 	}
+	// 	selectedNumbers.sort(function(a, b){return a - b});
+	// 	for (var i = 0; i < selectedNumbers.length; i++) {
+	// 		emNumbers[i].innerHTML = selectedNumbers[i];
+	// 	}
+	// });
 }
