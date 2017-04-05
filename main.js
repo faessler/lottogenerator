@@ -3,10 +3,13 @@
 // ============================== //
 // SWITCHER FUNCTIONS
 function euroMillions() {
-	$("body").removeClass("swisslotto").addClass("euromillions");
+	$("body").removeClass().addClass("euromillions");
 }
 function swissLotto() {
-	$("body").removeClass("euromillions").addClass("swisslotto");
+	$("body").removeClass().addClass("swisslotto");
+}
+function legalNotice() {
+	$("body").removeClass().addClass("legalnotice");
 }
 
 // HASH REQUEST
@@ -16,6 +19,9 @@ if(window.location.href.indexOf("#euromillions") > -1) {
 euroMillions(); // default
 if(window.location.href.indexOf("#swisslotto") > -1) {
    swissLotto();
+}
+if(window.location.href.indexOf("#legalnotice") > -1) {
+   legalNotice();
 }
 
 

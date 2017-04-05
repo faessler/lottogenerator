@@ -21,6 +21,9 @@ body {
 	&.swisslotto {
 		background: #91141D;
 	}
+	&.legalnotice {
+		background: #34495e;
+	}
 }
 .wrapper {
 	display: table-cell;
@@ -50,6 +53,16 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
     margin-bottom: 5px;
 }
+.container {
+	a {
+		color: #2980b9;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
 button {
     appearance: none;
     -moz-appearance: none;
@@ -67,6 +80,12 @@ button {
     cursor: pointer;
     position: relative;
 
+	&::selection {
+	  background: rgba(255, 255, 255, 0);
+	}
+	&::-moz-selection {
+	  background: rgba(255, 255, 255, 0);
+	}
 	&:focus {
 		outline: none;
 		box-shadow: none;
@@ -97,7 +116,7 @@ button {
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
-    color: $black;
+    color: #6b6b6b;
     font-weight: bold;
 
 	&:hover {
@@ -126,6 +145,8 @@ button {
 			background-color: #F0F0F0;
 		}
 		&[href="#euromillions"] {
+			color: $black;
+
 			.lottoselect__option__icon {
 				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/euro_millions_logo.png);
 			}
@@ -143,6 +164,8 @@ button {
 			background-color: #F0F0F0;
 		}
 		&[href="#swisslotto"] {
+			color: $black;
+
 			.lottoselect__option__icon {
 				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/swiss_lotto_logo.png);
 			}
@@ -151,6 +174,18 @@ button {
 			.lottoselect__option__icon {
 				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/euro_millions_logo_bw.png);
 			}
+		}
+	}
+}
+.lottoselect__option {
+	&[href="#swisslotto"] {
+		.lottoselect__option__icon {
+			background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/swiss_lotto_logo_bw.png);
+		}
+	}
+	&[href="#euromillions"] {
+		.lottoselect__option__icon {
+			background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/euro_millions_logo_bw.png);
 		}
 	}
 }
@@ -382,6 +417,34 @@ button {
     font-size: 12px;
     font-weight: normal;
 	margin: 10px auto 50px;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.ln {
+	display: none;
+}
+.legalnotice {
+	.em {
+		display: none;
+	}
+	.sl {
+		display: none;
+	}
+	.ln {
+		display: block;
+	}
+	.lottoselect__option {
+		+.lottoselect__option {
+			border-left: 1px solid #6b6b6b;
+		}
+	}
 }
 
 
@@ -451,7 +514,11 @@ button {
 		width: 100%;
 		bottom: 100px;
 		margin: 10px auto 20px;
-		color: #333;
+		color: $black;
 		font-size: 11px;
+
+		a {
+			color: $black;
+		}
 	}
 }
