@@ -15,19 +15,36 @@
 // SWITCHER FUNCTIONS
 function euroMillions() {
 	$("body").removeClass().addClass("euromillions");
+
+	// For Google-Analytics
+	ga('set', 'page', '/#euromillions');
+	ga('send', 'pageview');
 }
 function swissLotto() {
 	$("body").removeClass().addClass("swisslotto");
+
+	// For Google-Analytics
+	ga('set', 'page', '/#swisslotto');
+	ga('send', 'pageview');
 }
 function legalNotice() {
 	$("body").removeClass().addClass("legalnotice");
+
+	// For Google-Analytics
+	ga('set', 'page', '/#legalnotice');
+	ga('send', 'pageview');
 }
 
 // HASH REQUEST
 if(window.location.href.indexOf("#euromillions") > -1) {
    euroMillions();
 }
-euroMillions(); // default
+// Default Function
+euroMillions();
+// Default google-analytics
+ga('set', 'page', '/#euromillions');
+ga('send', 'pageview');
+
 if(window.location.href.indexOf("#swisslotto") > -1) {
    swissLotto();
 }
