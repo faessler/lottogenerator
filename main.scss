@@ -527,8 +527,6 @@ button {
 		min-height: inherit;
 	}
 	.em__stars {
-	    display: block;
-	    margin-top: 20px;
 		min-height: inherit;
 	}
 
@@ -540,8 +538,6 @@ button {
 		min-height: inherit;
 	}
 	.sl__extra {
-	    display: block;
-	    margin-top: 20px;
 		min-height: inherit;
 	}
 
@@ -559,5 +555,112 @@ button {
 		a {
 			color: $black;
 		}
+	}
+}
+@media all and (max-width: 530px) {
+	// Remove Button
+	.remove {
+	    width: 30px;
+	    height: 30px;
+		line-height: 30px;
+	}
+
+	// Row Labels
+	.sl b, .em b {
+		display: none;
+	}
+
+	// Swisslotto
+	.sl__numbers {
+		width: auto;
+	}
+	.sl__numbers__nr {
+	    width: 30px;
+	    height: 30px;
+	    line-height: 30px;
+	    font-size: 12px;
+	}
+	.sl__extra__nr  {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+	}
+
+	// Euromillions
+	.em__numbers {
+		width: auto;
+	}
+	.em__numbers__nr, .em__stars__wrap {
+	    width: 30px;
+	    height: 30px;
+	    line-height: 30px;
+	    font-size: 12px;
+	}
+	.em__stars__wrap__nr {
+		width: 30px;
+		height: 30px;
+		line-height: 33px;
+		font-size: 10px;
+	}
+	.em__stars__wrap:after {
+		font-size: 30px;
+	}
+}
+@media all and (max-width: 355px) {
+	// Add New and Shuffle Button
+	.optionsfields__addnew button {
+		padding: 6px 11px 6px 25px;
+
+		&:before {
+		    top: 3px;
+		    left: 10px;
+			font-size: 18px;
+		}
+	}
+	.optionsfields__shuffle button {
+		padding: 6px 11px 6px 25px;
+
+		&:before {
+		    top: 5px;
+		    left: 10px;
+		    font-size: 14px;
+		}
+	}
+	// Euromillions
+	.em__numbers {
+		margin-right: 20px;
+	}
+	.sl__numbers__nr {
+	    width: 25px;
+	    height: 25px;
+	    line-height: 25px;
+	    font-size: 12px;
+	}
+	.sl__extra__nr  {
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		font-size: 12px;
+	}
+
+	// Swisslotto
+	.sl__numbers {
+		margin-right: 20px;
+	}
+	.em__numbers__nr, .em__stars__wrap {
+	    width: 25px;
+	    height: 25px;
+	    line-height: 25px;
+	    font-size: 12px;
+	}
+	.em__stars__wrap__nr {
+		width: 25px;
+		height: 25px;
+		line-height: 29px;
+		font-size: 8px;
+	}
+	.em__stars__wrap:after {
+		font-size: 30px;
 	}
 }
