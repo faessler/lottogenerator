@@ -128,6 +128,9 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 					<span class='" + classListener + "__stars__wrap__nr " + classListener + "__stars__wrap__nr--2'>0</span>\
 				</span>\
 			</div>\
+			<div class='" + classListener + "__remove remove'>\
+				<button title='Zeile Entfernen'><span>&#10006;</span></button>\
+			</div>\
 		</div>\
 		");
 
@@ -165,6 +168,11 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 		for (var i = 0; i < selectedNumbers.length; i++) {
 			emNumbers[i].innerHTML = selectedNumbers[i];
 		}
+
+		// Remove function for added rows
+		$('.' + classListener + '__remove').click(function() {
+			$(this).parent().remove();
+		});
 	}
 
 	// Swisslotto
@@ -181,6 +189,9 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 			</div>\
 			<div class='" + classListener + "__extra'>\
 				<span class='" + classListener + "__extra__nr " + classListener + "__extra__nr--1'>0</span>\
+			</div>\
+			<div class='" + classListener + "__remove remove'>\
+				<button title='Zeile Entfernen'><span>&#10006;</span></button>\
 			</div>\
 		</div>\
 		");
@@ -219,5 +230,10 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 		for (var i = 0; i < selectedNumbers.length; i++) {
 			emNumbers[i].innerHTML = selectedNumbers[i];
 		}
+
+		// Remove function for added rows
+		$('.' + classListener + '__remove').click(function() {
+			$(this).parent().remove();
+		});
 	}
 }

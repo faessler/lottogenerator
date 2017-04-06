@@ -368,6 +368,29 @@ button {
 
 
 // ============================== //
+// REMOVE //
+// ============================== //
+.remove {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+
+	button {
+		padding: 0;
+		text-align: center;
+		vertical-align: middle;
+		background: none;
+		border: none;
+		color: #c0392b;
+	}
+}
+
+
+
+// ============================== //
 // OPTIONS //
 // ============================== //
 .optionsfields {
