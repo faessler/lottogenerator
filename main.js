@@ -31,7 +31,7 @@ function legalNotice() {
 	$("body").removeClass().addClass("legalnotice");
 
 	// For Google-Analytics
-	ga('set', 'page', '/#legalnotice');
+	ga('set', 'page', '/#impressum');
 	ga('send', 'pageview');
 }
 
@@ -39,8 +39,9 @@ function legalNotice() {
 if(window.location.href.indexOf("#euromillions") > -1) {
    euroMillions();
 }
-// Default Function
-euroMillions();
+euroMillions(); // Default Function
+window.location.hash = '#euromillions'; // Default Hash
+
 // Default google-analytics
 ga('set', 'page', '/#euromillions');
 ga('send', 'pageview');
