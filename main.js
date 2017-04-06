@@ -139,6 +139,7 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 		// Fill in Numbers
 		var emNumbers = $("." + classListener + "__row:last").find("." + classListener + "__numbers__nr");
 		shuffle(numbers);
+		shuffle(numbers);
 		var selectedNumbers = [];
 		for (var i = 0; i < emNumbers.length; i++) {
 			selectedNumbers[i] = numbers[i];
@@ -191,6 +192,7 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 		}
 		// Fill in Numbers
 		var emNumbers = $("." + classListener + "__row:last").find("." + classListener + "__numbers__nr");
+		shuffle(numbers);
 		shuffle(numbers);
 		var selectedNumbers = [];
 		for (var i = 0; i < emNumbers.length; i++) {
