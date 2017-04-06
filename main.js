@@ -40,7 +40,9 @@ if(window.location.href.indexOf("#euromillions") > -1) {
    euroMillions();
 }
 euroMillions(); // Default Function
-window.location.hash = '#euromillions'; // Default Hash
+if(window.location.hash == ''){
+   window.location.hash = '#euromillions'; // Default Hash
+}
 
 // Default google-analytics
 ga('set', 'page', '/#euromillions');
