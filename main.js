@@ -130,6 +130,40 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 			</div>\
 		</div>\
 		");
+
+		// Main Numbers
+		var numbers = [];
+		for (var i = 0; i < mainHighestNumber; i++) {
+			numbers[i] = i+1;
+		}
+		// Fill in Numbers
+		var emNumbers = $("." + classListener + "__row:last").find("." + classListener + "__numbers__nr");
+		shuffle(numbers);
+		var selectedNumbers = [];
+		for (var i = 0; i < emNumbers.length; i++) {
+			selectedNumbers[i] = numbers[i];
+		}
+		selectedNumbers.sort(function(a, b){return a - b});
+		for (var i = 0; i < selectedNumbers.length; i++) {
+			emNumbers[i].innerHTML = selectedNumbers[i];
+		}
+
+		// Extra Numbers
+		var numbers = [];
+		for (var i = 0; i < extraHighestNumber; i++) {
+			numbers[i] = i+1;
+		}
+		// Fill in Numbers
+		var emNumbers = $("." + classListener + "__row:last").find("." + classListener + "__stars__wrap__nr");
+		shuffle(numbers);
+		var selectedNumbers = [];
+		for (var i = 0; i < emNumbers.length; i++) {
+			selectedNumbers[i] = numbers[i];
+		}
+		selectedNumbers.sort(function(a, b){return a - b});
+		for (var i = 0; i < selectedNumbers.length; i++) {
+			emNumbers[i].innerHTML = selectedNumbers[i];
+		}
 	}
 
 	// Swisslotto
@@ -149,65 +183,39 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 			</div>\
 		</div>\
 		");
+
+		// Main Numbers
+		var numbers = [];
+		for (var i = 0; i < mainHighestNumber; i++) {
+			numbers[i] = i+1;
+		}
+		// Fill in Numbers
+		var emNumbers = $("." + classListener + "__row:last").find("." + classListener + "__numbers__nr");
+		shuffle(numbers);
+		var selectedNumbers = [];
+		for (var i = 0; i < emNumbers.length; i++) {
+			selectedNumbers[i] = numbers[i];
+		}
+		selectedNumbers.sort(function(a, b){return a - b});
+		for (var i = 0; i < selectedNumbers.length; i++) {
+			emNumbers[i].innerHTML = selectedNumbers[i];
+		}
+
+		// Extra Numbers
+		var numbers = [];
+		for (var i = 0; i < extraHighestNumber; i++) {
+			numbers[i] = i+1;
+		}
+		// Fill in Numbers
+		var emNumbers = $("." + classListener + "__row:last").find("." + classListener + "__extra__nr");
+		shuffle(numbers);
+		var selectedNumbers = [];
+		for (var i = 0; i < emNumbers.length; i++) {
+			selectedNumbers[i] = numbers[i];
+		}
+		selectedNumbers.sort(function(a, b){return a - b});
+		for (var i = 0; i < selectedNumbers.length; i++) {
+			emNumbers[i].innerHTML = selectedNumbers[i];
+		}
 	}
-
-
-	//
-	// // Create HTML
-	// $("." + classListener + "__row__wrap").append("\
-	// <div class='" + classListener + "__row'>\
-	// 	<div class='" + classListener + "__numbers'>\
-	// 	</div>\
-	// 	<div class='" + classListener + "__stars'>\
-	// 	</div>\
-	// </div>\
-	// ");
-	//
-	// // Main Numbers
-	// var numbers = [];
-	// for (var i = 0; i < mainNeededNumbers; i++) {
-	// 	numbers[i] = i+1;
-	// 	$("." + classListener + "__numbers").append("\
-	// 	<span class='" + classListener + "__numbers__nr " + classListener + "__numbers__nr--" + numbers[i] + "'>0</span>\
-	// 	");
-	// }
-
-	// // Fill in Numbers
-	// $("." + classListener + "__row").each(function(){
-	// 	shuffle(numbers);
-	// 	var emNumbers = $(this).find("." + classListener + "__numbers__nr");
-	// 	var selectedNumbers = [];
-	// 	for (var i = 0; i < emNumbers.length; i++) {
-	// 		selectedNumbers[i] = numbers[i];
-	// 	}
-	// 	selectedNumbers.sort(function(a, b){return a - b});
-	// 	for (var i = 0; i < selectedNumbers.length; i++) {
-	// 		emNumbers[i].innerHTML = selectedNumbers[i];
-	// 	}
-	// });
-
-
-
-	// Extra Numbers
-	var numbers = [];
-	for (var i = 0; i < extraHighestNumber; i++) {
-		numbers[i] = i+1;
-	}
-
-
-
-
-	// // Fill in Numbers
-	// $("." + classListener + "__row").each(function(){
-	// 	shuffle(numbers);
-	// 	var emNumbers = $(this).find("." + classListener + "__numbers__nr");
-	// 	var selectedNumbers = [];
-	// 	for (var i = 0; i < emNumbers.length; i++) {
-	// 		selectedNumbers[i] = numbers[i];
-	// 	}
-	// 	selectedNumbers.sort(function(a, b){return a - b});
-	// 	for (var i = 0; i < selectedNumbers.length; i++) {
-	// 		emNumbers[i].innerHTML = selectedNumbers[i];
-	// 	}
-	// });
 }
