@@ -184,6 +184,9 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 		$('.' + classListener + '__remove').click(function() {
 			$(this).parent().remove();
 		});
+
+		// Scroll to bottom after click on the addnew button
+		$(".container").scrollTop($('.' + classListener).height());
 	}
 
 	// Swisslotto
@@ -246,5 +249,11 @@ function addNewNumbers(classListener, mainHighestNumber, mainNeededNumbers, extr
 		$('.' + classListener + '__remove').click(function() {
 			$(this).parent().remove();
 		});
+
+		// Scroll to bottom after click on the addnew button
+		$(".container").scrollTop($('.' + classListener).height());
 	}
+
+	// Scroll to bottom of page after click on the addnew button
+	$("html, body").scrollTop($(document).height());
 }
