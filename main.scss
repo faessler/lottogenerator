@@ -505,7 +505,6 @@ button {
 		width: 100%;
 		height: calc(100vh - 92px);
 	    margin: 0 auto;
-		// padding: 0;
 		overflow: scroll;
 		padding: 20px;
 	}
@@ -513,32 +512,57 @@ button {
 	// LOTTO SWITCHER
 	.lottoselect {
 		width: 100%;
-		margin: 0 auto;
+	    margin: 0 auto;
+	    box-shadow: 0px 0px 4px 0px #333;
+	    z-index: 9999;
+	    position: relative;
 	}
 	.lottoselect__option {
 		border-radius: 0 !important;
 	}
 
 	// EUROMILLIONS
-	.em b {
-	    margin-bottom: 5px;
-	}
-	.em__numbers {
-		min-height: inherit;
-	}
-	.em__stars {
-		min-height: inherit;
+	.em {
+		min-height: 100%;
+		position: relative;
+		padding-bottom: 50px;
+
+		b {
+		    margin-bottom: 5px;
+		}
+		.em__numbers {
+			min-height: inherit;
+		}
+		.em__stars {
+			min-height: inherit;
+		}
 	}
 
 	// SWISSLOTTO
-	.sl b {
-		margin-bottom: 5px;
+	.sl {
+		min-height: 100%;
+		position: relative;
+		padding-bottom: 50px;
+
+		b {
+			margin-bottom: 5px;
+		}
+		.sl__numbers {
+			min-height: inherit;
+		}
+		.sl__extra {
+			min-height: inherit;
+		}
 	}
-	.sl__numbers {
-		min-height: inherit;
-	}
-	.sl__extra {
-		min-height: inherit;
+
+	// OPTIONS
+	.optionsfields {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
 	}
 
 	// LEGAL
