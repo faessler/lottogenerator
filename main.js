@@ -32,6 +32,10 @@ $('.lottoselect a, .legal a').click(function(e) {
 	// History pushstate
 	history.pushState('', '', href);
 
+	// Tell Google Analytics that the page has changed
+	ga('set', 'page', href);
+  	ga('send', 'pageview');
+
 	// Set Body Class Name
 	var bodyClassName = $(this).attr("href").replace('/', '');
 	$("body").removeClass().addClass(bodyClassName);
