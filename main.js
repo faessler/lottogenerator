@@ -8,6 +8,20 @@
 //
 
 
+$('.lottoselect a, .legal a').click(function(e) {
+	e.preventDefault();
+
+	href = $(this).attr("href");
+
+	// History Pushstate
+	history.pushState('', 'New URL: '+href, href);
+
+
+
+
+});
+
+
 
 // ============================== //
 // SWITCHER //
