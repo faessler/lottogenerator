@@ -159,12 +159,12 @@ button {
 			color: $black;
 
 			.lottoselect__option__icon {
-				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/euro_millions_logo.png);
+				background-image: url('/img/euro_millions_logo.png');
 			}
 		}
 		&[href="/swisslotto"] {
 			.lottoselect__option__icon {
-				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/swiss_lotto_logo_bw.png);
+				background-image: url('/img/swiss_lotto_logo_bw.png');
 			}
 		}
 	}
@@ -178,12 +178,12 @@ button {
 			color: $black;
 
 			.lottoselect__option__icon {
-				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/swiss_lotto_logo.png);
+				background-image: url('/img/swiss_lotto_logo.png');
 			}
 		}
 		&[href="/euromillions"] {
 			.lottoselect__option__icon {
-				background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/euro_millions_logo_bw.png);
+				background-image: url('/img/euro_millions_logo_bw.png');
 			}
 		}
 	}
@@ -191,12 +191,12 @@ button {
 .lottoselect__option {
 	&[href="/swisslotto"] {
 		.lottoselect__option__icon {
-			background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/swiss_lotto_logo_bw.png);
+			background-image: url('/img/swiss_lotto_logo_bw.png');
 		}
 	}
 	&[href="/euromillions"] {
 		.lottoselect__option__icon {
-			background-image: url(https://www.swisslos.ch/media/tech/layout/images/logo/euro_millions_logo_bw.png);
+			background-image: url('/img/euro_millions_logo_bw.png');
 		}
 	}
 }
