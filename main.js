@@ -13,12 +13,11 @@
 // SWITCHER //
 // ============================== //
 // Default View
-if (window.location.hash == '#euromillions' || '#swisslotto' || '#impressum') {
+if (window.location.hash == '#euromillions' || window.location.hash == '#swisslotto' || window.location.hash == '#impressum') {
 	var bodyClassName = window.location.hash.replace('#', '');
-	console.log(bodyClassName);
 	$("body").removeClass().addClass(bodyClassName);
 	history.pushState('', '', bodyClassName);
-} else if (location.pathname == '/' || 'index.html') {
+} else if (location.pathname == '' || '/' || 'index.html') {
 	$("body").removeClass().addClass('euromillions');
 	history.pushState('', '', '/euromillions');
 }
