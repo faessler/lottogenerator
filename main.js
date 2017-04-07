@@ -8,65 +8,38 @@
 //
 
 
-$('.lottoselect a, .legal a').click(function(e) {
-	e.preventDefault();
-
-	href = $(this).attr("href");
-
-	// History Pushstate
-	history.pushState('', 'New URL: '+href, href);
-
-
-
-
-});
-
-
 
 // ============================== //
 // SWITCHER //
 // ============================== //
-// SWITCHER FUNCTIONS
-function euroMillions() {
-	$("body").removeClass().addClass("euromillions");
-
-	// For Google-Analytics
-	ga('set', 'page', '/#euromillions');
-	ga('send', 'pageview');
-}
-function swissLotto() {
-	$("body").removeClass().addClass("swisslotto");
-
-	// For Google-Analytics
-	ga('set', 'page', '/#swisslotto');
-	ga('send', 'pageview');
-}
-function legalNotice() {
-	$("body").removeClass().addClass("legalnotice");
-
-	// For Google-Analytics
-	ga('set', 'page', '/#impressum');
-	ga('send', 'pageview');
+// Default View
+if (location.pathname == '/' || 'index.html') {
+	$("body").removeClass().addClass('euromillions');
+	history.pushState('', '', '/euromillions');
 }
 
-// HASH REQUEST
-if(window.location.href.indexOf("#euromillions") > -1) {
-   euroMillions();
-}
-euroMillions(); // Default Function
-if(window.location.hash == ''){
-   window.location.hash = '#euromillions'; // Default Hash
-}
+$('.lottoselect a, .legal a').click(function(e) {
+	// Get href from a Tag
+	href = $(this).attr("href");
 
-// Default google-analytics
-ga('set', 'page', '/#euromillions');
-ga('send', 'pageview');
+	// Stop Browser from opening the page for real
+	e.preventDefault();
 
-if(window.location.href.indexOf("#swisslotto") > -1) {
-   swissLotto();
-}
-if(window.location.href.indexOf("#legalnotice") > -1) {
-   legalNotice();
+	// History pushstate
+	history.pushState('', '', href);
+	console.log(href);
+
+	// Set Body Class Name
+	var bodyClassName = $(this).attr("href").replace('/', '');
+	console.log(bodyClassName);
+	$("body").removeClass().addClass(bodyClassName);
+});
+
+// Back- & Forwardbuttons
+window.onpopstate = function(event) {
+	var bodyClassName = location.pathname.replace('/', '');
+	console.log(bodyClassName);
+	$("body").removeClass().addClass(bodyClassName);
 }
 
 
