@@ -13,7 +13,12 @@
 // SWITCHER //
 // ============================== //
 // Default View
-if (location.pathname == '/' || 'index.html') {
+if (window.location.hash == '#euromillions' || '#swisslotto' || '#impressum') {
+	var bodyClassName = window.location.hash.replace('#', '');
+	console.log(bodyClassName);
+	$("body").removeClass().addClass(bodyClassName);
+	history.pushState('', '', bodyClassName);
+} else if (location.pathname == '/' || 'index.html') {
 	$("body").removeClass().addClass('euromillions');
 	history.pushState('', '', '/euromillions');
 }
@@ -27,18 +32,15 @@ $('.lottoselect a, .legal a').click(function(e) {
 
 	// History pushstate
 	history.pushState('', '', href);
-	console.log(href);
 
 	// Set Body Class Name
 	var bodyClassName = $(this).attr("href").replace('/', '');
-	console.log(bodyClassName);
 	$("body").removeClass().addClass(bodyClassName);
 });
 
 // Back- & Forwardbuttons
 window.onpopstate = function(event) {
 	var bodyClassName = location.pathname.replace('/', '');
-	console.log(bodyClassName);
 	$("body").removeClass().addClass(bodyClassName);
 }
 
