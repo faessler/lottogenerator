@@ -22,6 +22,7 @@ if (window.location.hash == '#euromillions' || window.location.hash == '#swisslo
 	history.pushState('', '', '/euromillions');
 }
 
+// Create PushState
 $('.lottoselect a, .legal a').click(function(e) {
 	// Get href from a Tag
 	href = $(this).attr("href");
@@ -43,8 +44,12 @@ $('.lottoselect a, .legal a').click(function(e) {
 
 // Back- & Forwardbuttons
 window.onpopstate = function(event) {
+	var href = location.pathname;
 	var bodyClassName = location.pathname.replace('/', '');
 	$("body").removeClass().addClass(bodyClassName);
+
+	ga('set', 'page', href);
+  	ga('send', 'pageview');
 }
 
 
