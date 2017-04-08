@@ -514,10 +514,12 @@ button {
 	}
 	.container {
 		width: 100%;
-		height: calc(100vh - 92px);
-	    margin: 0 auto;
+		position: absolute;
+		margin: 0 auto;
 		overflow: scroll;
 		padding: 20px;
+		top: 50px;
+		bottom: 145px;
 	}
 
 	// LOTTO SWITCHER
@@ -688,16 +690,16 @@ button {
 	.em__numbers__nr, .em__stars__wrap {
 	    width: 25px;
 	    height: 25px;
-	    line-height: 25px;
+	    line-height: 23px;
 	    font-size: 12px;
 	}
 	.em__stars__wrap__nr {
 		width: 25px;
 		height: 25px;
-		line-height: 29px;
+		line-height: 25px;
 		font-size: 8px;
 	}
 	.em__stars__wrap:after {
-		font-size: 30px;
+		font-size: 25px;
 	}
 }
