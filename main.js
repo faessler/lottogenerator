@@ -10,7 +10,7 @@
 
 
 // ============================== //
-// SWITCHER //
+// SWITCHING PAGES //
 // ============================== //
 // Default View
 if (window.location.hash == '#euromillions' || window.location.hash == '#swisslotto' || window.location.hash == '#impressum') {
@@ -45,20 +45,20 @@ $('.lottoselect a, .legal a').click(function(e) {
 // Back- & Forwardbuttons
 window.onpopstate = function(event) {
 	// If the last page is a root page jump one more back
-    if (location.pathname == '' || location.pathname == '/' || location.pathname == 'index.html') {
-        window.history.back();
-    }
+	if (location.pathname == '' || location.pathname == '/' || location.pathname == 'index.html') {
+		window.history.back();
+	} else {
+		// Set Body Class Name
+		var bodyClassName = location.pathname.replace('/', '');
+		$("body").removeClass().addClass(bodyClassName);
 
-	// Set Body Class Name
-	var bodyClassName = location.pathname.replace('/', '');
-	$("body").removeClass().addClass(bodyClassName);
+		// Get href from URL
+		var href = location.pathname;
 
-	// Get href from URL
-	var href = location.pathname;
-
-	// Tell Google analaytics that the page has changed
-	ga('set', 'page', href);
-  	ga('send', 'pageview');
+		// Tell Google analaytics that the page has changed
+		ga('set', 'page', href);
+	  	ga('send', 'pageview');
+	}
 }
 
 
