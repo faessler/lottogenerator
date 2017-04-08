@@ -44,10 +44,19 @@ $('.lottoselect a, .legal a').click(function(e) {
 
 // Back- & Forwardbuttons
 window.onpopstate = function(event) {
-	var href = location.pathname;
+	// If the last page is a root page jump one more back
+    if (location.pathname == '' || location.pathname == '/' || location.pathname == 'index.html') {
+        window.history.back();
+    }
+
+	// Set Body Class Name
 	var bodyClassName = location.pathname.replace('/', '');
 	$("body").removeClass().addClass(bodyClassName);
 
+	// Get href from URL
+	var href = location.pathname;
+
+	// Tell Google analaytics that the page has changed
 	ga('set', 'page', href);
   	ga('send', 'pageview');
 }
