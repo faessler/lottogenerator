@@ -17,7 +17,7 @@ if (window.location.hash == '#euromillions' || window.location.hash == '#swisslo
 	var bodyClassName = window.location.hash.replace('#', '');
 	$("body").removeClass().addClass(bodyClassName);
 	history.pushState('', '', bodyClassName);
-} else if (location.pathname == '' || '/' || 'index.html') {
+} else if (location.pathname == '' || location.pathname == '/' || location.pathname == 'index.html') {
 	$("body").removeClass().addClass('euromillions');
 	history.pushState('', '', '/euromillions');
 }
