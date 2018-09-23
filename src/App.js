@@ -224,7 +224,7 @@ class App extends Component {
                                     } />
                                 )
                         }
-                        <Redirect exact from='/' to={'/'+getStringUrlFriendly(this.state.lotteries['euroMillions'].name)} />
+                        <Redirect exact from="/(|index.html)" to={'/'+getStringUrlFriendly(this.state.lotteries['euroMillions'].name)} />
                         <Route render={()=> <NotFound setBodyClassNames={this.setBodyClassNames} />} />
                     </Switch>
 
