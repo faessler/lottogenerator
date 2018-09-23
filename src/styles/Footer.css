@@ -1,0 +1,18 @@
+footer {
+  background: #151515;
+  padding: 0.625rem 1rem;
+  font-size: 0.75rem;
+  color: #F0F0F0;
+  text-align: center; }
+  @media (min-width: 768px) {
+    footer {
+      padding: 0.625rem 2rem;
+      background: none; } }
+  footer a {
+    text-decoration: none;
+    color: currentColor; }
+    footer a:hover {
+      text-decoration: underline; }
+    @media (hover: none) {
+      footer a {
+        text-decoration: none; } }

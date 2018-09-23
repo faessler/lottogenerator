@@ -1,0 +1,79 @@
+html {
+  font-size: 100%;
+  color: #151515; }
+
+body {
+  overflow: hidden;
+  margin: 0;
+  background: #2C3E50;
+  font-family: Helvetica, Arial, sans-serif; }
+  body.euroMillions {
+    background: #1F85C9; }
+  body.swissLotto {
+    background: #91141D; }
+  @media (min-width: 768px) {
+    body {
+      overflow: auto; } }
+
+@media (min-width: 768px) {
+  #root {
+    min-height: 100vh;
+    display: flex;
+    align-items: center; } }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  margin-top: 1em;
+  margin-bottom: .1em; }
+  h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
+    margin-top: .6em; }
+  h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0; }
+
+h1 {
+  font-size: 1.5rem; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 1.8rem; } }
+
+h2 {
+  font-size: 1.3rem; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.5rem; } }
+
+h3, h4, h5, h6 {
+  font-size: 1.2rem; }
+  @media (min-width: 768px) {
+    h3, h4, h5, h6 {
+      font-size: 1.3rem; } }
+
+p {
+  margin: .6em 0;
+  line-height: 1.4; }
+
+a {
+  color: currentColor; }
+
+button {
+  appearance: none;
+  margin: 0 .5em .5em 0;
+  padding: .7em 1em;
+  border: 0;
+  border-radius: 8px;
+  background: #2C3E50;
+  font-size: 0.875rem;
+  color: #F0F0F0;
+  cursor: pointer; }
+  button:focus {
+    outline: none; }
+  button:hover {
+    background: #1a252f; }
+  @media (hover: none) {
+    button {
+      background: #2C3E50; } }
+  button svg {
+    fill: currentColor; }

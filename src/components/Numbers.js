@@ -22,7 +22,7 @@ class Numbers extends Component {
             <ul className={this.getNumbersClassNames()}>
                 {
                     numbers.map((number, index) =>
-                        <li key={index}>{number}</li>
+                        <li key={index}><span>{number}</span></li>
                     )
                 }
             </ul>

@@ -1,0 +1,109 @@
+// VARIABLES
+@import 'variables';
+
+// TOP LAYERS
+html {
+  font-size: 100%;
+  color: $black;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  background: $primary;
+  font-family: Helvetica, Arial, sans-serif;
+
+  @each $lottery, $color in $lotteries {
+    &.#{$lottery} {
+      background: $color;
+    }
+  }
+  @include breakpoint(iPad) {
+    overflow: auto;
+  }
+}
+#root {
+  @include breakpoint(iPad) {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+// ALL LAYERS
+// all elements
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  margin-top: 1em;
+  margin-bottom: .1em;
+
+  &+h1, &+h2, &+h3, &+h4, &+h5, &+h6 {
+    margin-top: .6em;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}
+h1 {
+  font-size: 1.5rem;
+
+  @include breakpoint(iPad) {
+    font-size: 1.8rem;
+  }
+}
+h2 {
+  font-size: 1.3rem;
+
+  @include breakpoint(iPad) {
+    font-size: 1.5rem;
+  }
+}
+h3, h4, h5, h6 {
+  font-size: 1.2rem;
+
+  @include breakpoint(iPad) {
+    font-size: 1.3rem;
+  }
+}
+
+// paragraphs
+p {
+  margin: .6em 0;
+  line-height: 1.4;
+}
+
+// links
+a {
+  color: currentColor;
+}
+
+// buttons
+button {
+  appearance: none;
+  margin: 0 .5em .5em 0;
+  padding: .7em 1em;
+  border: 0;
+  border-radius: 8px;
+  background: $primary;
+  font-size: 0.875rem;
+  color: $white;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: darken($primary, 10%);
+  }
+  @media (hover: none) {
+    background: $primary;
+  }
+  svg {
+    fill: currentColor;
+  }
+}

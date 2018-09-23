@@ -6,7 +6,7 @@ import '../../styles/Main.css';
 
 class Lottery extends Component {
     componentWillMount() {
-        this.props.setAppClassNames();
+        this.props.setBodyClassNames();
     }
 
     render() {

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class Legal extends Component {
     componentWillMount() {
-        this.props.setAppClassNames();
+        this.props.setBodyClassNames();
     }
 
     render() {

@@ -1,0 +1,58 @@
+@import 'variables';
+
+.numbers {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: .3em;
+    line-height: 2.5em;
+    border: 1px solid $light-gray;
+    border-radius: 100%;
+    background: linear-gradient(135deg, #fff 0%, #d3d3d3 100%);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+
+    @include breakpoint(iPhone8) {
+      font-size: 0.875rem;
+    }
+    @include breakpoint(iPhone8Plus) {
+      font-size: 1rem;
+    }
+  }
+  &--lucky {
+    li {
+      background: linear-gradient(135deg, #fff09b 0%, #d2b100 100%);
+    }
+  }
+  &--stars {
+    li {
+      position: relative;
+      background: none;
+      border: none;
+      border-radius: unset;
+
+      span {
+        position: relative;
+        z-index: 1;
+      }
+      &:after {
+        content: "\2605";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -1px;
+        left: 0;
+        font-size: 2.6em;
+        color: #ffdf2f;
+        text-shadow: 1px 0 0 #d3d3d3, -1px 0 0 #d3d3d3, 0 1px 0 #d3d3d3, 0 -1px 0 #d3d3d3;
+      }
+    }
+  }
+}

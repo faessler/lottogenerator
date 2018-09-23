@@ -1,0 +1,32 @@
+@import 'variables';
+
+main {
+  flex-grow: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  background: $white;
+
+  @include breakpoint(iPad) {
+    overflow: hidden;
+    padding: 2rem;
+    -webkit-overflow-scrolling: unset;
+    border-radius: 0 0 10px 10px;
+  }
+  a {
+    color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+      padding: 1px 2px;
+      margin: -1px -2px;
+    }
+    @media (hover: none) {
+      background: none;
+      color: $primary;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import 'variables';
+
+footer {
+  background: $black;
+  padding: 0.625rem 1rem;
+  font-size: 0.75rem;
+  color: $white;
+  text-align: center;
+
+  @include breakpoint(iPad) {
+    padding: 0.625rem 2rem;
+    background: none;
+  }
+  a {
+    text-decoration: none;
+    color: currentColor;
+
+    &:hover {
+      text-decoration: underline;
+    }
+    @media (hover: none) {
+      text-decoration: none;
+    }
+  }
+}

@@ -18,7 +18,6 @@ class App extends Component {
         super(props);
 
         this.state = {
-            appClassNames: 'App',
             lotteries: {
                 euroMillions: {
                     name: 'Euro Millions',
@@ -180,20 +179,16 @@ class App extends Component {
     };
 
     // App class names
-    setAppClassNames = () => {
-        this.setState({
-            appClassNames: this.getAppClassNames()
-        });
-    };
-    getAppClassNames = () => {
+    setBodyClassNames = () => {
         for (let lotteryKey in this.state.lotteries) {
             const firstPartOfUrlPath = window.location.pathname.split('/')[1];
             const lotteryPath = getStringUrlFriendly(this.state.lotteries[lotteryKey].name);
             if (firstPartOfUrlPath === lotteryPath) {
-                return 'App ' + lotteryKey;
+                document.body.classList.add(lotteryKey);
+            } else {
+                document.body.classList.remove(lotteryKey);
             }
         }
-        return 'App';
     };
 
     // Life cycle
@@ -208,34 +203,32 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div className={this.state.appClassNames}>
-                    <div className="content">
-                        <Nav lotteries={this.state.lotteries} />
+                <div className='App'>
+                    <Nav lotteries={this.state.lotteries} />
 
-                        <Switch>
-                            <Route path={'/legal-notice'} render={()=> <Legal setAppClassNames={this.setAppClassNames} />} />
-                            {
-                                Object
-                                    .keys(this.state.lotteries)
-                                    .map(key =>
-                                        <Route key={key} path={'/'+getStringUrlFriendly(this.state.lotteries[key].name)} render={()=>
-                                            <Lottery
-                                                lotteryKey={key}
-                                                lottery={this.state.lotteries[key]}
-                                                onClickCreateSuggestions={this.onClickCreateSuggestions}
-                                                onClickDeleteSuggestion={this.onClickDeleteSuggestion}
-                                                onClickReshuffleSuggestions={this.onClickReshuffleSuggestions}
-                                                setAppClassNames={this.setAppClassNames}
-                                            />
-                                        } />
-                                    )
-                            }
-                            <Redirect exact from='/' to={'/'+getStringUrlFriendly(this.state.lotteries['euroMillions'].name)} />
-                            <Route render={()=> <NotFound setAppClassNames={this.setAppClassNames} />} />
-                        </Switch>
+                    <Switch>
+                        <Route path={'/legal-notice'} render={()=> <Legal setBodyClassNames={this.setBodyClassNames} />} />
+                        {
+                            Object
+                                .keys(this.state.lotteries)
+                                .map(key =>
+                                    <Route key={key} path={'/'+getStringUrlFriendly(this.state.lotteries[key].name)} render={()=>
+                                        <Lottery
+                                            lotteryKey={key}
+                                            lottery={this.state.lotteries[key]}
+                                            onClickCreateSuggestions={this.onClickCreateSuggestions}
+                                            onClickDeleteSuggestion={this.onClickDeleteSuggestion}
+                                            onClickReshuffleSuggestions={this.onClickReshuffleSuggestions}
+                                            setBodyClassNames={this.setBodyClassNames}
+                                        />
+                                    } />
+                                )
+                        }
+                        <Redirect exact from='/' to={'/'+getStringUrlFriendly(this.state.lotteries['euroMillions'].name)} />
+                        <Route render={()=> <NotFound setBodyClassNames={this.setBodyClassNames} />} />
+                    </Switch>
 
-                        <Footer />
-                    </div>
+                    <Footer />
                 </div>
             </Router>
         );
