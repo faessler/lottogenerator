@@ -192,7 +192,7 @@ class App extends Component {
     };
 
     // Life cycle
-    componentWillMount() {
+    componentDidMount() {
         this.setLocalStorageForEachLottery();
     }
     componentDidUpdate() {

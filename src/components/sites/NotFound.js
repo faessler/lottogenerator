@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 class NotFound extends Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.setBodyClassNames();
     }
 
