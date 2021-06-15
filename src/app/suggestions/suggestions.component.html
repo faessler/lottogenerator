@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>{{pattern.numbers.quantity}} Numbers ({{pattern.numbers.min}} - {{pattern.numbers.max}})</th>
+      <th>{{pattern.additionalNumbers.quantity}} Numbers ({{pattern.additionalNumbers.min}} - {{pattern.additionalNumbers.max}})</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul class="numbers">
+          <li *ngFor="let number of numbers"><span>{{ number }}</span></li>
+        </ul>
+      </td>
+      <td>
+        <ul class="additionalNumbers">
+          <li *ngFor="let additionalNumber of additionalNumbers"><span>{{ additionalNumber }}</span></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,59 @@
+.table {
+  th {
+    vertical-align: top;
+    text-align: left;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+  td {
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+}
+.numbers {
+  li {
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: .3em;
+    line-height: 2.5em;
+    border: 1px solid #d3d3d3;
+    border-radius: 100%;
+    background: linear-gradient(
+135deg
+,#fff,#d3d3d3);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+.additionalNumbers {
+  li {
+    width: 2.5em;
+    height: 2.5em;
+    margin-right: .3em;
+    line-height: 2.5em;
+    border: 1px solid #d3d3d3;
+    border-radius: 100%;
+    background: linear-gradient(
+135deg
+,#fff,#ffdf2f);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
